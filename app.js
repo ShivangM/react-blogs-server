@@ -1,9 +1,9 @@
-import express from "express";
-import mongoose from "mongoose";
-import blogRouter from "./routes/blogRoutes";
-import router from "./routes/userRoutes";
-import cors from "cors";
-import dotenv from 'dotenv'
+const express = require("express")
+const mongoose = require("mongoose")
+const blogRouter = require("./routes/blog-routes")
+const router = require("./routes/user-routes")
+const cors = require("cors")
+const dotenv = require('dotenv')
 
 const app = express();
 app.use(cors());
@@ -28,3 +28,4 @@ mongoose
     console.log(`Connected TO Database and Listening on port ${PORT}`)
   )
   .catch((err) => console.log(err));
+
